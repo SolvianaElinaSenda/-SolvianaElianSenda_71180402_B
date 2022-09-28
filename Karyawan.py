@@ -1,8 +1,8 @@
 class Karyawan:
     _nama=""
     _umur=None
-    _jenisKelamin=""
-    _upahPerHari=0
+    _jenisKelamin=None
+    _upahPerHari=None
 
     #Constructor 
     def __init__(self,nama,umur):
@@ -37,10 +37,10 @@ class Karyawan:
         print("Upah Per Hari: ",self.getUpahPerHari())
     #Fungsi hitungGajiBulanan
     def hitungGajiBulanan(self,_hariKerja):
-        if self._upahPerHari <=0:
+        if self.getUpahPerHari() == None:
             print("Error!! Upah Perhari Belum Diinputkan")
         else:
-            print("Gaji Bulan Ini: ",self._upahPerHari * _hariKerja)
+            print("Gaji Bulan Ini: ",self.getUpahPerHari() * _hariKerja)
 
 #test case
 if __name__ == "__main__":
